@@ -8,18 +8,21 @@ let Projects = {
 
 window.onload = () =>{
     let parsed = JSON.parse(localStorage.getItem('myObject'));
-    Projects = parsed
-    ProjectManegmnet.projectsOnLoad();
-
+    if(parsed === null){
+        Projects = { ProjectONE: {}}
+        ProjectManegmnet.projectsOnLoad();
+    }else{
+        Projects = parsed
+        ProjectManegmnet.projectsOnLoad();
+    }
+    ProjectManegmnet.currentProject  = document.querySelector('.projects').firstElementChild.firstElementChild.textContent;
     if(ProjectManegmnet.currentProject === ""){
         console.log('ProjectManegmnet.currentProject is empty for some reason')
     }else{
     ProjectManegmnet.currentProject  = document.querySelector('.projects').firstElementChild.firstElementChild.textContent;
     ProjectManegmnet.goOverProjects();
     }
-
 } 
-
 
 const ProjectManegmnet = {
 
@@ -64,14 +67,12 @@ const ProjectManegmnet = {
 
     removeToDo: function(datasetid){
         let z = `todo${datasetid}`
-        console.log(z)
         delete Projects[ProjectManegmnet.currentProject][z];
         ProjectManegmnet.updateProjectObject();
     },
 
     removeProject: function(projectname){
         delete Projects[projectname]
-        console.log(Projects)
         ProjectManegmnet.updateProjectObject();
     },
 
@@ -144,7 +145,7 @@ const ProjectDOMManipulation = {
 
         newDiv.classList.remove('prparent');
         newDiv.dataset.projectname = project;
-        newDiv.addEventListener('click',()=>{ProjectManegmnet.currentProject = project; ProjectManegmnet.goOverProjects()});
+        newDiv.addEventListener('click',()=>{ProjectManegmnet.currentProject = project; ProjectManegmnet.goOverProjects();this.selectedProject()});
 
         let newp = document.createElement('p');
         newp.dataset.Pprojectname = project;
@@ -171,8 +172,9 @@ const ProjectDOMManipulation = {
 
         newDiv.classList.remove('prparent');
         newDiv.dataset.projectname = dataset;
+        
 
-        newDiv.addEventListener('click',()=>{ProjectManegmnet.currentProject = dataset; ProjectManegmnet.goOverProjects()});
+        newDiv.addEventListener('click',()=>{ProjectManegmnet.currentProject = dataset; ProjectManegmnet.goOverProjects();this.selectedProject()});
 
         projectName = document.querySelector('#projectnameinput').value;
         let newp = document.createElement('p');
@@ -295,5 +297,14 @@ const ProjectDOMManipulation = {
         document.querySelector('#submitedit').addEventListener('click',()=>{
             ProjectManegmnet.editToDo(dataset);
         })
+    },
+
+    selectedProject: function(){
+        document.querySelectorAll('.projectname').forEach(elem=>{
+            elem.style = "background-color:rgba(0, 0, 0, 0.1);bottom: 0;"
+        })
+
+        selectedProject = document.querySelector(`[data-projectname="${ProjectManegmnet.currentProject}"]`)
+        selectedProject.style = "background-color:rgba(0, 0, 0, 0.5); bottom: 10px;"
     },
 }
