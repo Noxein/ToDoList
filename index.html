@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/90fead1a85.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="addProjectToggle addProjectToggleopa">
+        <div class="addProjetForm">
+            <div class="addProjectFormWrap">
+                <p>Enter Your Project Name</p>
+                <input type="text" id="projectnameinput">
+                <p class="input_error"></p>
+            </div>
+
+            <input type="button" value="SUBMIT" id="projectnamesubmit">
+        </div>
+    </div>
+
+    <div class="addToDoToggle addToDoopa">
+        <div class="containeradd">
+            <p>title</p>
+            <input type="text" id="addtitle">
+            
+            <p>description</p>
+            <input type="text" id="adddescription">
+            
+            <p>duedate</p>
+            <input type="text"  id="addduedate">
+            
+            <p>priority</p>
+            <input type="text"  id="addpriority">
+            
+            <p>notes</p>
+            <input type="text"  id="addnotes">
+
+            <button id="addtodoSubmit">SUBMIT</button>
+            
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="projectstab">
+            <div class="projects">
+                
+
+                <div class="addnewProject" id="addnewProject">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="todotabwrap">
+            <div class="todotab">
+
+                <div class="addtodo last">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="todo todoinvisible">
+
+        <div class="todocardwrap">
+            <p class="bigger">Title</p>
+            <p id="title" class="smaller"></p>
+        </div>
+
+        <div class="todocardwrap">
+            <p class="bigger">Description</p>
+            <p id="description" class="smaller"></p>
+        </div>
+
+        <div class="todocardwrap">
+            <p class="bigger">Duedate</p>
+            <p id="duedate" class="smaller"></p>
+        </div>
+
+        <div class="todocardwrap">
+            <p class="bigger">Priority</p>
+            <p id="priority" class="smaller"></p>
+        </div>
+
+        <div class="todocardwrap">
+            <p class="bigger">Notes</p>
+            <p id="notes" class="smaller"></p>
+        </div>
+
+        <div class="todocardwrapedit">
+            <button id="edit" class="edit">EDIT</button>
+            <button id="delete" class="delete">DELETE</button>
+        </div>
+    </div>
+
+    <div class="edittoggle edittoggleOpacity">
+
+        <div class="coolwrap">
+            <p>Title</p>
+            <input type="text" id="edittitle">
+
+            <p>Description</p>
+            <input type="text" id="editdescription">
+
+            <p>Duedate</p>
+            <input type="date" id="editduedate">
+
+            <p>Priority</p>
+            <select id="editpriority">
+                <option value="MostImportant">Most Important</option>
+                <option value="Important">Important</option>
+                <option value="LeastImportant">LeastImportant</option>
+              </select>
+
+            <p>Notes</p>
+            <textarea id="editnotes" cols="30" rows="10"></textarea>
+
+            <button id="submitedit">SUBMIT</button>
+        </div>
+
+    </div>
+
+    <div class="projectname prparent">
+        Project ONE
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

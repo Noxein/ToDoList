@@ -1,0 +1,281 @@
+body{
+    box-sizing: border-box;
+    background-color: #aee6ec;
+    margin: 0;
+}
+.container{
+    width: 80vw;
+    margin: 0 auto;
+}
+.projectstab{
+    border: solid white 3px;
+}
+.pfloat{
+    position: relative;
+    top: -35px;
+    font-size: 20px;
+}
+.projecttabwrap{
+    display: flex;
+    flex-direction: column;
+}
+.projects{
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+.projects>div{
+    border: 3px white solid;
+    padding: 10px;
+    border-radius: 10px;
+}
+.todotab{
+    min-height: 500px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    border: solid white 3px;
+    padding: 5px;
+    width: 100%;
+    justify-content: space-evenly;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.todotab>div{
+    border: 3px solid white;
+}
+.addProjectToggle{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.addProjectToggleopa{
+    display: none;
+}
+.addProjetForm{
+    background-color: whitesmoke;
+    width: 450px;
+    height: 600px;
+    border: white 3px solid;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    z-index: 10;
+}
+.addProjectFormWrap>input{
+    width: 350px;
+    height: 70px;
+    font-size: 40px;
+    border-radius: 10px;
+}
+.addProjetForm>input[type=button]{
+    width: 357px;
+    height: 70px;
+    font-size: 40px;
+    margin-bottom: 70px;
+    background-color: green;
+    border: white 3px solid;
+    border-radius: 10px;
+    color: white;
+}
+.input_error{
+    color: red;
+    font-size: 30px;
+}
+.addToDoToggle{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.addToDoopa{
+    display: none;
+}
+.containeradd{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+color: white;
+}
+.edittoggle{
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+
+}
+.coolwrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: whitesmoke;
+    width: 450px;
+    height: 600px;
+    border: white 3px solid;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 50px auto;
+    padding: 20px;
+}
+.coolwrap>input[type=text],
+.coolwrap>input[type=date],
+.coolwrap>select,
+.coolwrap>textarea{
+    width: 300px;
+    height: 30px;
+    margin: 0 auto;
+    border: rgba(0, 0, 0, 0.1) 3px solid;
+    border-radius: 10px;
+}
+.coolwrap>button{
+    width: 357px;
+    height: 70px;
+    font-size: 40px;
+    background-color: green;
+    border: white 3px solid;
+    border-radius: 10px;
+    color: white;
+    margin-top: 20px;
+}
+.edittoggleOpacity{
+    display: none;
+}
+.editProjectInput,
+.applyBtnOpacity,
+.editBtnOpacity,
+.delBtnOpacity,
+.prparent{
+    display: none;
+}
+
+.todo{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.2);
+    gap: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 0.671);
+-moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 0.671);
+box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 0.671);
+}
+.todo>p{
+    margin-top: 0px;
+
+}
+.todocardwrap> .bigger{
+    font-weight: bold;
+    padding: 10px 0 10px 10px;
+    margin: 0;
+    font-size: 20px;
+
+}
+.todocardwrap> .smaller{
+    margin: 0 0 0 10px;
+    font-size: 17px;
+}
+.todocardwrap{
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 100px;
+}
+
+
+.todoinvisible{
+    display: none;
+}
+
+.todocardwrapedit .edit{
+    background: rgba(0, 128, 0, 0.514);
+}
+.todocardwrapedit .delete{
+    background: rgba(255, 0, 0, 0.534);
+}
+.todocardwrapedit .edit,
+.todocardwrapedit .delete{
+    color: white;
+    border: white 2px solid;
+    border-radius: 10px;
+    flex: 1;
+}
+.todocardwrapedit{
+    height: 60px;
+    display: flex;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.todotabwrap{
+    display: flex;
+    width: 80vw;
+}
+.addtodo{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.2);
+    gap: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 300px;
+    color: rgba(255, 255, 255, 0.3);
+    justify-content: center;
+    align-items: center;
+    -webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+-moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+}
+.addtodo:hover{
+    cursor: pointer;
+}
+.delBtn{
+    background: rgba(255, 0, 0, 1);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    left: 15px;
+    color: white;
+    padding: 0;
+}
+.delBtn:hover{
+    cursor: pointer;
+}
+.projectname{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
+    transition-duration: 0.5s;
+}
+.addnewProject{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    font-size: 40px;
+    background-color: rgba(0, 0, 0, 0.15);
+    transition-duration: 0.5s;
+}
+.addnewProject:hover,
+.projectname:hover{
+    cursor: pointer;
+    -webkit-box-shadow: 8px 8px 24px -17px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 8px 8px 24px -17px rgba(66, 68, 90, 1);
+    box-shadow: 8px 8px 24px -17px rgba(66, 68, 90, 1);
+    transition-duration: 0.5s;
+    background-color: rgba(0, 0, 0, 0.05);;
+}
